@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Anton&family=Cookie&family=Poppins:wght@600&display=swap');
+
+:root {
+    --bg-text-shadow: 0 2px 4px rgb(255 215 0 / 10%), 0 3px 6px rgb(255 215 0 / 10%), 0 8px 16px rgb(255 215 0 / 10%);
+    --bg-box-shadow: 0px 0px 20px 6px rgba(255, 215, 0, 0.3);
+    --primary-bg: #000000; /* Black */
+    --secondary-bg: #ffffff; /* White */
+    --accent-color: #FFD700; /* Gold */
+    --text-primary: #ffffff; /* White text */
+}
+
+body {
+    height: 100vh;
+    overflow: hidden;
+    background-color: var(--primary-bg); /* Black background */
+    color: var(--text-primary); /* White text */
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Upper Navigation Bar */
+.uppernav {
+    height: 50px;
+    background-image: linear-gradient(90deg, var(--accent-color), var(--primary-bg));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 40px;
+}
+
+.logo p {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    color: var(--secondary-bg); /* White text */
+    text-shadow: var(--bg-text-shadow);
+}
+
+.logout button {
+    height: 30px;
+    width: 100px;
+    background-color: var(--accent-color);
+    border: none;
+    border-radius: 20px;
+    color: var(--secondary-bg); /* White */
+    cursor: pointer;
+}
+
+/* Sidebar Navigation */
+.sidenav {
+    position: absolute;
+    background-color: var(--primary-bg); /* Black */
+    width: 18%;
+    height: 100%;
+    color: var(--secondary-bg); /* White */
+}
+
+ul li {
+    display: flex;
+    align-items: center;
+    padding: 0px 10px;
+    height: 50px;
+    cursor: pointer;
+    margin-bottom: 5px;
+    color: var(--secondary-bg); /* White text */
+}
+
+ul li:hover {
+    background-color: rgba(255, 215, 0, 0.5); /* Gold hover */
+    color: var(--primary-bg); /* Black text on hover */
+}
+
+ul li.active {
+    background-color: rgba(255, 215, 0, 0.5); /* Gold active */
+    color: var(--primary-bg); /* Black text */
+}
+
+/* Main Screen */
+.mainscreen {
+    margin-left: 18%;
+}
+
+/* Frames */
+.frames {
+    height: 100vh;
+    width: 100%;
+    display: none;
+}
+
+.frames.active {
+    display: block;
+}
+
+/* Temporary Styles */
+img {
+    height: 23px;
+}
+
+/* Mobile View */
+#mobileview {
+    height: 100vh;
+    width: 100%;
+    background-color: var(--secondary-bg); /* White */
+    position: absolute;
+    z-index: 9999;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    color: var(--primary-bg); /* Black text */
+}
+
+@media (max-width: 40rem) {
+    #mobileview {
+        display: flex;
+    }
+}

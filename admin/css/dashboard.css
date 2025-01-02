@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Anton&family=Cookie&family=Poppins:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400&display=swap');
+
+:root {
+    --bg-primary: #000000; /* Black */
+    --bg-secondary: #ffffff; /* White */
+    --accent-color: #FFD700; /* Gold */
+    --text-primary: #ffffff; /* White */
+    --text-secondary: #e6e6e6; /* Light gray */
+    --bg-box-shadow: 0px 0px 20px 6px rgba(255, 215, 0, 0.3); /* Gold shadow */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: 'Poppins', sans-serif;
+}
+
+.databox,
+.chartbox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.databox .box {
+    width: 90%;
+    max-width: 300px;
+    height: auto;
+    padding: 20px;
+    margin: 10px;
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    box-shadow: var(--bg-box-shadow);
+    border-radius: 10px;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.databox .box h1 {
+    font-size: 2rem;
+    font-family: 'Hind Siliguri', sans-serif;
+    color: var(--bg-primary);
+}
+
+.box:nth-child(1) {
+    border-bottom: 8px solid var(--accent-color);
+}
+.box:nth-child(2) {
+    border-bottom: 8px solid rgba(255, 255, 255, 0.8);
+}
+.box:nth-child(3) {
+    border-bottom: 8px solid var(--text-secondary);
+}
+
+.databox .box:hover {
+    transform: scale(1.05);
+    background-color: var(--accent-color);
+    color: var(--bg-primary);
+}
+
+.chartbox .profitchart,
+.chartbox .bookroomchart {
+    background-color: var(--bg-secondary);
+    color: var(--bg-primary);
+    box-shadow: var(--bg-box-shadow);
+    border-radius: 10px;
+    padding: 20px;
+    width: 90%;
+    max-width: 600px; /* Adjust chart size */
+    margin: 10px auto;
+}
+
+*::-webkit-scrollbar {
+    width: 0.5rem;
+}
+*::-webkit-scrollbar-track {
+    background: var(--bg-primary);
+}
+*::-webkit-scrollbar-thumb {
+    background: var(--accent-color);
+}
+
+@media (max-width: 768px) {
+    .databox .box,
+    .chartbox .profitchart,
+    .chartbox .bookroomchart {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .databox .box h1 {
+        font-size: 1.5rem;
+    }
+}

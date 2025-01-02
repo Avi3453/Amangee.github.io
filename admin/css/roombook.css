@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Anton&family=Cookie&family=Poppins:wght@600&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400&display=swap');
+
+:root {
+    --bg-text-shadow: 0 2px 4px rgba(51, 51, 0, 0.1), 0 3px 6px rgba(51, 51, 0, 0.1), 0 8px 16px rgba(51, 51, 0, 0.1);
+    --bg-box-shadow: 0px 0px 20px 6px rgba(102, 85, 0, 0.4);
+    --gold: #d4af37;
+    --black: #0a0d2d;
+    --white: #ffffff;
+    --brown: #8b4513;
+}
+
+*::-webkit-scrollbar {
+    width: 0.4rem;
+}
+
+*::-webkit-scrollbar-track {
+    background: var(--black);
+}
+
+*::-webkit-scrollbar-thumb {
+    background: var(--gold);
+}
+
+body {
+    background-color: var(--white);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    /* text-shadow: var(--bg-text-shadow); */
+}
+
+i {
+    font-size: 20px;
+}
+
+.searchsection {
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--black);
+    position: fixed;
+    z-index: 500;
+}
+
+#search_bar {
+    height: 40px;
+    width: 80%;
+    border: none;
+    background-color: rgba(212, 175, 55, 0.3);
+    padding-left: 20px;
+    border-radius: 30px;
+}
+
+#adduser {
+    height: 40px;
+    background-color: var(--gold);
+    border: none;
+    border-radius: 30px;
+    padding: 0 50px;
+    color: var(--black);
+    font-weight: bold;
+}
+
+#adduser:hover {
+    background-color: rgba(212, 175, 55, 0.8);
+}
+
+.exportexcel {
+    height: 40px;
+    width: 40px;
+    background-color: var(--brown);
+    border: none;
+    border-radius: 50%;
+}
+
+#guestdetailpanel {
+    position: fixed;
+    z-index: 1000;
+    height: 100%;
+    width: 100%;
+    display: none;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#guestdetailpanel .guestdetailpanelform {
+    height: 620px;
+    width: 1170px;
+    background-color: var(--gold);
+    border-radius: 10px;
+    position: relative;
+    top: 20px;
+    animation: guestinfoform 0.3s ease;
+    overflow-y: auto;
+    max-height: 600px;
+}
+
+a {
+    color: var(--black);
+}
+
+@keyframes guestinfoform {
+    0% {
+        transform: translateY(50px);
+    }
+}
+
+.guestdetailpanelform .head {
+    padding: 0 10px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.guestdetailpanelform .head h3 {
+    color: var(--black);
+    position: relative;
+    left: 40%;
+    margin-top: 10px;
+}
+
+.guestdetailpanelform .head i {
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.guestdetailpanelform .middle {
+    width: 100%;
+    height: 200px;
+    margin: 10px 0 0 0;
+    display: flex;
+    overflow-y: auto;
+}
+
+.guestdetailpanelform .middle .guestinfo,
+.guestdetailpanelform .middle .reservationinfo {
+    width: 200%;
+    background-color: rgba(102, 85, 0, 0.2);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 300px; /* Set max height for these sections */
+    overflow-y: auto; /* Scroll if content exceeds the max-height */
+}
+
+.line {
+    width: 10px;
+    height: 100%;
+}
+
+.guestdetailpanelform .footer {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+.guestdetailpanelform .footer {
+    height: auto; /* Adjusts to fit the content */
+    display: flex;
+    justify-content: center; /* Centers the button */
+    align-items: center; /* Vertically aligns the button */
+    padding: 10px 0; /* Adds some spacing */
+}
+
+.guestdetailpanelform .footer .submit-btn {
+    background-color: var(--black);
+    color: var(--gold);
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+}
+
+.guestdetailpanelform .footer .submit-btn:hover {
+    background-color: rgba(10, 13, 45, 0.8);
+    transform: scale(1.05);
+}
+
+
+.middle input,
+.selectinput {
+    width: 100%;
+    border: none;
+    background-color: rgba(139, 69, 19, 0.3);
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 20px;
+}
+
+.datesection {
+    display: flex;
+}
+
+.datesection span {
+    margin: 5px;
+}
+
+/* Room Book Table */
+.roombooktable {
+    position: absolute;
+    color: var(--black);
+    margin-top: 80px;
+    width: 100%;
+    height: 100vh;
+    padding-bottom: 900px; /* Extra space */
+}
+
+.roombooktable thead {
+    background-color: var(--black);
+    color: var(--white);
+    text-align: center;
+}
+
+.roombooktable tbody {
+    text-align: center;
+}
+
+.action a {
+    text-decoration: none;
+}
+
+.action button {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5px;
+}
